@@ -208,7 +208,7 @@ mgr.start();
       MPI_Send(&c, rows*sizeOfMatrix, MPI_DOUBLE, MASTER, mtype, MPI_COMM_WORLD);
 
       worker_send_time = MPI_Wtime() - worker_send_start_time;
-      CALI_MARK_BEGIN(worker_send);
+      CALI_MARK_END(worker_send);
       //SENDING PART FOR WORKER PROCESS ENDS HERE
    }
 
