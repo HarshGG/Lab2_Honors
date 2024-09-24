@@ -111,7 +111,7 @@ mgr.start();
       //SEND-RECEIVE PART FOR THE MASTER PROCESS STARTS HERE
 
       double master_send_receive_start_time = MPI_Wtime();
-      CALI_MARK_BEGIN(master_send_recieve)
+      CALI_MARK_BEGIN(master_send_recieve);
       /* Send matrix data to the worker tasks */
       averow = sizeOfMatrix/numworkers;
       extra = sizeOfMatrix%numworkers;
@@ -213,7 +213,7 @@ mgr.start();
    }
 
    // WHOLE PROGRAM COMPUTATION PART ENDS HERE
-   whole_computation_time = MPI_Wtime() - whhole_start_time;
+   whole_computation_time = MPI_Wtime() - whole_start_time;
    CALI_MARK_END(whole_computation);
 
    adiak::init(NULL);
