@@ -193,7 +193,7 @@ mgr.start();
             for (j=0; j<sizeOfMatrix; j++)
                c[i][k] = c[i][k] + a[i][j] * b[j][k];
          }
-      CALI_MARK_BEGIN(worker_calculation);
+      CALI_MARK_END(worker_calculation);
       worker_calculation_time = MPI_Wtime() - worker_calculation_start_time;
       //CALCULATION PART FOR WORKER PROCESS ENDS HERE
       
